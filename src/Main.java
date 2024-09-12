@@ -18,7 +18,7 @@ public class Main {
         ejercicio3(sc);
 
         */
-        ejercicio4(sc);  // Método para el Ejercicio 4
+        //ejercicio4(sc);  // Método para el Ejercicio 4
         // ejercicio5(sc);  // Método para el Ejercicio 5
         // ejercicio6(sc);  // Método para el Ejercicio 6
         // ejercicio7(sc);  // Método para el Ejercicio 7
@@ -33,7 +33,7 @@ public class Main {
         // ejercicio16(sc);  // Método para el Ejercicio 16
         // ejercicio17(sc);  // Método para el Ejercicio 17
         // ejercicio18(sc);  // Método para el Ejercicio 18
-        // ejercicio19(sc);  // Método para el Ejercicio 19
+         ejercicio19(sc);  // Método para el Ejercicio 19
         // ejercicio20(sc);  // Método para el Ejercicio 20
         // ejercicio21(sc);  // Método para el Ejercicio 21
         // ejercicio22(sc);  // Método para el Ejercicio 22
@@ -228,8 +228,13 @@ public class Main {
     }
 
     // Método para el Ejercicio 19
-    public static void ejercicio19(Scanner sc) {
+    public static void ejercicio19(Scanner sc)  {
         // Lógica para el ejercicio 19
+        Calculo calculo = new Calculo();
+
+
+
+
     }
 
     // Método para el Ejercicio 20
