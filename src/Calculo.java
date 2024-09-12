@@ -6,7 +6,7 @@ public class Calculo {
 
     public static void realizarCalculos() {
         OperacionMatematica calculo = new OperacionMatematica();
-        calculo.setValor1(5);
+        calculo.setValor1(5.6);
         calculo.setValor2(10);
 
         calculo.setOperacion("+");
