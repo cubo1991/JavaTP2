@@ -7,7 +7,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Main {
-
+    public static <T> void print(T content){
+        System.out.println(content);
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -33,11 +35,14 @@ public class Main {
         // ejercicio16(sc);  // Método para el Ejercicio 16
         // ejercicio17(sc);  // Método para el Ejercicio 17
         // ejercicio18(sc);  // Método para el Ejercicio 18
-         ejercicio19();  // Método para el Ejercicio 19
+//         ejercicio19();  // Método para el Ejercicio 19
         // ejercicio20(sc);  // Método para el Ejercicio 20
         // ejercicio21(sc);  // Método para el Ejercicio 21
         // ejercicio22(sc);  // Método para el Ejercicio 22
         // ejercicio23(sc);  // Método para el Ejercicio 23
+//        print(ejercicio21(5));
+//        print(ejercicio22("789"));
+//        print(ejercicio23("oirotircse ed arodatupmoc"));
     }
 
     // Método para el Ejercicio 1
@@ -243,17 +248,25 @@ public class Main {
     }
 
     // Método para el Ejercicio 21
-    public static void ejercicio21(Scanner sc) {
-        // Lógica para el ejercicio 21a
+    public static int ejercicio21(int x) {
+        if (x==0) {
+            return 0;
+        } else {
+            return x + ejercicio21( x - 1);
+        }
     }
 
     // Método para el Ejercicio 22
-    public static void ejercicio22(Scanner sc) {
-        // Lógica para el ejercicio 22
+    public static int ejercicio22(String x) {
+        if (x == "") return 0;
+        else {
+            return Character.getNumericValue(x.charAt(x.length() - 1)) + ejercicio22(x.substring(0, x.length() - 1));
+        }
     }
 
     // Método para el Ejercicio 23
-    public static void ejercicio23(Scanner sc) {
-        // Lógica para el ejercicio 23
+    public static String ejercicio23(String s) {
+        if (s == "") return "";
+        return s.charAt(s.length() - 1) + ejercicio23(s.substring(0, s.length() - 1));
     }
 }
