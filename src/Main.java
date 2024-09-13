@@ -160,26 +160,82 @@ public class Main {
     // Método para el Ejercicio 5
     public static void ejercicio5(Scanner sc) {
         // Lógica para el ejercicio 5
+        //solicitamos el ingreso de un número y lo convertimos a un String mediante String.valueOf
+        Scanner scaner = new Scanner(System.in);
+        System.out.println("introduci un numero");
+        int numero = scaner.nextInt();
+        String cadena = String.valueOf(numero);
+        System.out.println("el nuumero como cadena es: " + cadena);
+
     }
 
     // Método para el Ejercicio 6
     public static void ejercicio6(Scanner sc) {
         // Lógica para el ejercicio 6
+        // calculamos el tamaño de la cadena, mediante la funcion length()
+        String texto = "La lluvia en Mendoza es escasa";
+        int longitud = texto.length();
+        System.out.println("el tamaño de la cadena es : " + longitud + " caracteres");
+
     }
 
     // Método para el Ejercicio 7
     public static void ejercicio7(Scanner sc) {
         // Lógica para el ejercicio 7
+        // creamos una funcion que cuente las vocales por cada iteracion
+        public static int contadoresDeVocales3 (String cadena){
+            int contadOrDeVocales = 0;
+            for (int i = 0; i < cadena.length(); i++) {
+                char caracteres = cadena.charAt(i);
+                Character.toLowerCase(caracteres);
+                switch (caracteres) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        contadOrDeVocales++;
+                        break;
+
+                }
+
+            }
+            return contadOrDeVocales;
+
+        }
+// llamamos a la funcion, y calculamos la cantidad de vocales
+        Scanner scaner = new Scanner(System.in);
+        System.out.println("introduce una cadena ");
+        String cadena = scaner.nextLine();
+        int tamaños = cadena.length();
+        int totalDEvocales = contadoresDeVocales3(cadena);
+        System.out.println("El tamaño de la cadena es:  " + tamaños + "  caracteres.");
+        System.out.println("La cantidad de vocales en la cadena es: " + totalDEvocales);
     }
 
     // Método para el Ejercicio 8
     public static void ejercicio8(Scanner sc) {
         // Lógica para el ejercicio 8
+        //usamos la funcion replace() para remplazar todas las letras  A por E
+        String textos3 = "La lluvia en Mendoza es escasa";
+        String textoModificado = textos3.replace('a', 'e');
+        System.out.println("texto original :  " + textos3);
+        System.out.println(" texto modificado :  " + textoModificado );
+
     }
 
     // Método para el Ejercicio 9
     public static void ejercicio9(Scanner sc) {
         // Lógica para el ejercicio 9
+        // usamos la funcion charAT() para transforma cada carácter a su código ASCII
+        String text0sacodigo = "La lluvia en Mendoza es escasa";
+        for ( int x= 0; x < text0sacodigo.length(); x++) {
+            char letras= text0sacodigo.charAt(x);
+            int codigoAscii= (int) letras;
+            System. out.print(codigoAscii + " ");
+        }
+        System.out.println();
+
     }
 
     // Método para el Ejercicio 10
@@ -377,6 +433,7 @@ public class Main {
     // Método para el Ejercicio 20
     public static void ejercicio20(Scanner sc) {
         // Lógica para el ejercicio 20
+
     }
 
     // Método para el Ejercicio 21
