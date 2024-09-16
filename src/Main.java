@@ -67,6 +67,11 @@ public class Main {
     }
 
     // Método para el Ejercicio 2
+    //Si se asigna un valor fuera de rango a una variable, puede ocurrir un desbordamiento, 
+    //lo que provoca que el valor se ajuste automáticamente a un número incorrecto dentro del rango permitido. 
+    //Esto depende del tipo de dato; por ejemplo, en un int de Java, si se supera el valor máximo, el valor "rebota" 
+    //y comienza desde el mínimo permitido. Para evitar este problema, se puede usar tipos de datos más grandes 
+    //o implementar validaciones que limiten los valores antes de asignarlos.
     public static void ejercicio2(Scanner sc) {
         System.out.println("Ingrese un número pequeño (byte):");
         try {
