@@ -438,6 +438,7 @@ public class Main {
     // Método para el Ejercicio 20
     public static void ejercicio20(Scanner sc) {
         // Lógica para el ejercicio 20
+        punto20();
 
     }
 
