@@ -400,29 +400,164 @@ public class Main {
 
     }
 
-    // Método para el Ejercicio 14
+     // Método para el Ejercicio 14
     public static void ejercicio14(Scanner sc) {
-        // Lógica para el ejercicio 14
-    }
+
+        public class MainInt {
+
+            public static void main(String[] args) {
+                // Declaración de una variable int
+                int numero = 10;
+
+                // Operaciones aritméticas
+                numero = numero + 5;
+
+                // Comparación con otro int
+                int otroNumero = 15;
+                if (numero == otroNumero) {
+                    System.out.println("Los números son iguales.");
+                } else {
+                    System.out.println("Los números son diferentes.");
+                }
+
+                // Operaciones simples
+                int suma = numero + otroNumero;
+                System.out.println("La suma de los números es: " + suma);
+
+            }
+        }
+
+        public class MainInteger {
+
+            public static void main(String[] args) {
+                // Declaración de un objeto Integer
+                Integer numero = 10;
+
+                // Operaciones aritméticas
+                numero = numero + 5;  // Autoboxing y Unboxing automáticos
+
+                // Comparación con otro Integer
+                Integer otroNumero = 15;
+                if (numero.equals(otroNumero)) {
+                    System.out.println("Los números son iguales.");
+                } else {
+                    System.out.println("Los números son diferentes.");
+                }
+
+                // Operaciones simples
+                Integer suma = numero + otroNumero;
+                System.out.println("La suma de los números es: " + suma);
+            }
+        }
+}
+
+
 
     // Método para el Ejercicio 15
     public static void ejercicio15(Scanner sc) {
-        // Lógica para el ejercicio 15
+
+        public class Main {
+            public static void main(String[] args) {
+                Integer numero = null;
+
+                if (numero == null) {
+                    System.out.println("El valor de numero es null.");
+                } else {
+                    System.out.println("El valor de numero es: " + numero);
+                }
+            }
+        }
+
     }
 
     // Método para el Ejercicio 16
     public static void ejercicio16(Scanner sc) {
-        // Lógica para el ejercicio 16
+
+        public class Main {
+            public static void main(String[] args) {
+                // Crear una variable de tipo Double
+                Double valorDouble = 7.7;
+
+                // Convertir Double a tipo primitivo double
+                double valorPrimitivo = valorDouble;
+
+                // Resultado
+                System.out.println("El valor primitivo es: " + valorPrimitivo);
+            }
+        }
+
     }
 
     // Método para el Ejercicio 17
     public static void ejercicio17(Scanner sc) {
-        // Lógica para el ejercicio 17
-    }
 
-    // Método para el Ejercicio 18
+        import java.text.SimpleDateFormat;
+        import java.util.Date;
+
+        public class FuncionesPrograma {
+
+            public static String getFechaString(Date fecha) {
+                // Definir el formato de fecha deseado
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                // Convertir la fecha a una cadena utilizando el formato definido
+                return sdf.format(fecha);
+            }
+        }
+
+
+
+        class Principal {
+            public static void main(String[] args) {
+                // Crear una instancia de Date con la fecha y hora actuales
+                Date fechaActual = new Date();
+
+                // Llamar al método getFechaString de la clase FuncionesPrograma
+                String fechaComoCadena = FuncionesPrograma.getFechaString(fechaActual);
+
+                // Imprimir la fecha en formato cadena
+                System.out.println("La fecha actual es: " + fechaComoCadena);
+            }
+        }
+
+
+        // Método para el Ejercicio 18
     public static void ejercicio18(Scanner sc) {
-        // Lógica para el ejercicio 18
+
+            import java.text.SimpleDateFormat;
+        import java.util.Calendar;
+        import java.util.Date;
+
+            public class FuncionesPrograma {
+
+                // Método para convertir una fecha (día, mes, año) a un objeto Date
+                public static Date getFechaDate(int dia, int mes, int anho) {
+                    //Aca uso la clase Calendar
+                    Calendar calendar = Calendar.getInstance();
+                    // Establecemos el año, mes y día en el calendario
+                    calendar.set(anho, mes - 1, dia);
+                    // Retornamos la fecha correspondiente
+                    return calendar.getTime();
+                }
+
+                // Método para convertir una fecha de tipo Date a una cadena
+                public static String getFechaString(Date fecha) {
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                    return sdf.format(fecha);
+                }
+            }
+
+            class Principal {
+                public static void main(String[] args) {
+                    // Usar el método getFechaDate para crear una fecha específica
+                    Date fechaEspecifica = FuncionesPrograma.getFechaDate(8, 9, 2024);
+
+                    // Aca convierto la fecha en cadena getFechaString
+                    String fechaComoCadena = FuncionesPrograma.getFechaString(fechaEspecifica);
+
+                    // Fecha en modo cadena
+                    System.out.println("La fecha específica es: " + fechaComoCadena);
+                }
+            }
     }
 
     // Método para el Ejercicio 19
