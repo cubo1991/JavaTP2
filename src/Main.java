@@ -193,27 +193,33 @@ public class Main {
     public static void ejercicio7(Scanner sc) {
         // Lógica para el ejercicio 7
         // creamos una funcion que cuente las vocales por cada iteracion
-        public static int contadoresDeVocales3 (String cadena){
-            int contadOrDeVocales = 0;
-            for (int i = 0; i < cadena.length(); i++) {
-                char caracteres = cadena.charAt(i);
-                Character.toLowerCase(caracteres);
-                switch (caracteres) {
-                    case 'a':
-                    case 'e':
-                    case 'i':
-                    case 'o':
-                    case 'u':
-                        contadOrDeVocales++;
-                        break;
 
-                }
+        ejercicio7();
+
+    }
+    public static int contadoresDeVocales3 (String cadena){
+        int contadOrDeVocales = 0;
+        for (int i = 0; i < cadena.length(); i++) {
+            char caracteres = cadena.charAt(i);
+            Character.toLowerCase(caracteres);
+            switch (caracteres) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    contadOrDeVocales++;
+                    break;
 
             }
-            return contadOrDeVocales;
 
         }
-// llamamos a la funcion, y calculamos la cantidad de vocales
+        return contadOrDeVocales;
+
+    }
+
+
+    public  static void ejercicio7() {
         Scanner scaner = new Scanner(System.in);
         System.out.println("introduce una cadena ");
         String cadena = scaner.nextLine();
@@ -222,6 +228,10 @@ public class Main {
         System.out.println("El tamaño de la cadena es:  " + tamaños + "  caracteres.");
         System.out.println("La cantidad de vocales en la cadena es: " + totalDEvocales);
     }
+
+
+
+
 
     // Método para el Ejercicio 8
     public static void ejercicio8(Scanner sc) {
