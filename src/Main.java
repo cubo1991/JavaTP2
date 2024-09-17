@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 
 public class Main {
@@ -294,8 +298,7 @@ public class Main {
     // Método para el Ejercicio 17
     public static void ejercicio17(Scanner sc) {
 
-        import java.text.SimpleDateFormat;
-        import java.util.Date;
+
 
         public class FuncionesPrograma {
 
@@ -326,9 +329,7 @@ public class Main {
         // Método para el Ejercicio 18
     public static void ejercicio18(Scanner sc) {
 
-            import java.text.SimpleDateFormat;
-        import java.util.Calendar;
-        import java.util.Date;
+
 
             public class FuncionesPrograma {
 
