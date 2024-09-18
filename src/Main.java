@@ -1,10 +1,13 @@
-import com.sun.source.tree.WhileLoopTree;
+
 
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Main {
     public static <T> void print(T content){
@@ -14,36 +17,48 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         // Modularizamos el código en diferentes métodos
-       /* ejercicio1(sc);
+
+        ejercicio1(sc);
         ejercicio2(sc);
 
-        ejercicio3(sc);
+       ejercicio3(sc);
 
-        */
-        //ejercicio4(sc);  // Método para el Ejercicio 4
-        // ejercicio5(sc);  // Método para el Ejercicio 5
-        // ejercicio6(sc);  // Método para el Ejercicio 6
-        // ejercicio7(sc);  // Método para el Ejercicio 7
-        // ejercicio8(sc);  // Método para el Ejercicio 8
-        // ejercicio9(sc);  // Método para el Ejercicio 9
-        //ejercicio10(sc);  // Método para el Ejercicio 10
-        // ejercicio11(sc);  // Método para el Ejercicio 11
-        //ejercicio12(sc);  // Método para el Ejercicio 12
+
+      ejercicio4(sc);  // Método para el Ejercicio 4
+        ejercicio5(sc);  // Método para el Ejercicio 5
+         ejercicio6(sc);  // Método para el Ejercicio 6
+         ejercicio7();  // Método para el Ejercicio 7
+         ejercicio8(sc);  // Método para el Ejercicio 8
+         ejercicio9(sc);  // Método para el Ejercicio 9
+
+
+       ejercicio10(sc);  // Método para el Ejercicio 10
+
+
+
+      ejercicio12(sc);  // Método para el Ejercicio 12
          ejercicio13(sc);  // Método para el Ejercicio 13
-        // ejercicio14(sc);  // Método para el Ejercicio 14
-        // ejercicio15(sc);  // Método para el Ejercicio 15
-        // ejercicio16(sc);  // Método para el Ejercicio 16
-        // ejercicio17(sc);  // Método para el Ejercicio 17
-        // ejercicio18(sc);  // Método para el Ejercicio 18
-         //ejercicio19();  // Método para el Ejercicio 19
-        // ejercicio20(sc);  // Método para el Ejercicio 20
-        // ejercicio21(sc);  // Método para el Ejercicio 21
-        // ejercicio22(sc);  // Método para el Ejercicio 22
-        // ejercicio23(sc);  // Método para el Ejercicio 23
-//        print(ejercicio21(5));
-//        print(ejercicio22("789"));
-//        print(ejercicio23("oirotircse ed arodatupmoc"));
+         ejercicio14(sc);  // Método para el Ejercicio 14
+         ejercicio15(sc);  // Método para el Ejercicio 15
+
+       ejercicio16(sc);  // Método para el Ejercicio 16
+       //ejercicio17(sc);  // Método para el Ejercicio 17
+
+
+         ejercicio19();  // Método para el Ejercicio 19
+
+        ejercicio20(sc);  // Método para el Ejercicio 20
+
+       //ejercicio21();  // Método para el Ejercicio 21
+       //ejercicio22();  // Método para el Ejercicio 22
+        //ejercicio23();  // Método para el Ejercicio 23
+     print(ejercicio21(5));
+        print(ejercicio22("789"));
+       print(ejercicio23("oirotircse ed arodatupmoc"));
     }
+
+
+
 
     // Método para el Ejercicio 1
     public static void ejercicio1(Scanner sc) {
@@ -72,10 +87,10 @@ public class Main {
     }
 
     // Método para el Ejercicio 2
-    //Si se asigna un valor fuera de rango a una variable, puede ocurrir un desbordamiento, 
-    //lo que provoca que el valor se ajuste automáticamente a un número incorrecto dentro del rango permitido. 
-    //Esto depende del tipo de dato; por ejemplo, en un int de Java, si se supera el valor máximo, el valor "rebota" 
-    //y comienza desde el mínimo permitido. Para evitar este problema, se puede usar tipos de datos más grandes 
+    //Si se asigna un valor fuera de rango a una variable, puede ocurrir un desbordamiento,
+    //lo que provoca que el valor se ajuste automáticamente a un número incorrecto dentro del rango permitido.
+    //Esto depende del tipo de dato; por ejemplo, en un int de Java, si se supera el valor máximo, el valor "rebota"
+    //y comienza desde el mínimo permitido. Para evitar este problema, se puede usar tipos de datos más grandes
     //o implementar validaciones que limiten los valores antes de asignarlos.
     public static void ejercicio2(Scanner sc) {
         System.out.println("Ingrese un número pequeño (byte):");
@@ -190,14 +205,17 @@ public class Main {
     }
 
     // Método para el Ejercicio 7
-    public static void ejercicio7(Scanner sc) {
-        // Lógica para el ejercicio 7
-        // creamos una funcion que cuente las vocales por cada iteracion
-
-        ejercicio7();
-
+    public static void ejercicio7() {
+        Scanner scaner = new Scanner(System.in);
+        System.out.println("introduce una cadena ");
+        String cadena = scaner.nextLine();
+        int tamaños = cadena.length();
+        int totalDEvocales = contadoresDeVocales3(cadena);
+        System.out.println("El tamaño de la cadena es:  " + tamaños + "  caracteres.");
+        System.out.println("La cantidad de vocales en la cadena es: " + totalDEvocales);
     }
-    public static int contadoresDeVocales3 (String cadena){
+
+    public static int contadoresDeVocales3 (String cadena) {
         int contadOrDeVocales = 0;
         for (int i = 0; i < cadena.length(); i++) {
             char caracteres = cadena.charAt(i);
@@ -211,28 +229,13 @@ public class Main {
                     contadOrDeVocales++;
                     break;
 
+
+
             }
 
         }
         return contadOrDeVocales;
-
     }
-
-
-    public  static void ejercicio7() {
-        Scanner scaner = new Scanner(System.in);
-        System.out.println("introduce una cadena ");
-        String cadena = scaner.nextLine();
-        int tamaños = cadena.length();
-        int totalDEvocales = contadoresDeVocales3(cadena);
-        System.out.println("El tamaño de la cadena es:  " + tamaños + "  caracteres.");
-        System.out.println("La cantidad de vocales en la cadena es: " + totalDEvocales);
-    }
-
-
-
-
-
     // Método para el Ejercicio 8
     public static void ejercicio8(Scanner sc) {
         // Lógica para el ejercicio 8
@@ -305,8 +308,8 @@ public class Main {
     // Método para el Ejercicio 11
     public static void ejercicio11(Scanner sc) {
 
-        //Pedir al usurio que ingrese dos datos
-        System.out.println("Ingrese dos palabras:" );
+        //Pedir al usuario que ingrese dos datos
+        System.out.println("Ingrese las palabras:" );
 
         //escanear los datos ingresados
         String Palabra1 = sc.nextLine();
@@ -418,9 +421,9 @@ public class Main {
      // Método para el Ejercicio 14
     public static void ejercicio14(Scanner sc) {
 
-        public class MainInt {
+         class MainInt {
 
-            public static void main(String[] args) {
+            public static void main14(String[] args) {
                 // Declaración de una variable int
                 int numero = 10;
 
@@ -442,9 +445,9 @@ public class Main {
             }
         }
 
-        public class MainInteger {
+         class MainInteger {
 
-            public static void main(String[] args) {
+            public static void main142(String[] args) {
                 // Declaración de un objeto Integer
                 Integer numero = 10;
 
@@ -471,8 +474,8 @@ public class Main {
     // Método para el Ejercicio 15
     public static void ejercicio15(Scanner sc) {
 
-        public class Main {
-            public static void main(String[] args) {
+         class Main15 {
+            public static void main15(String[] args) {
                 Integer numero = null;
 
                 if (numero == null) {
@@ -488,8 +491,8 @@ public class Main {
     // Método para el Ejercicio 16
     public static void ejercicio16(Scanner sc) {
 
-        public class Main {
-            public static void main(String[] args) {
+         class Main16 {
+            public static void main16(String[] args) {
                 // Crear una variable de tipo Double
                 Double valorDouble = 7.7;
 
@@ -506,23 +509,22 @@ public class Main {
     // Método para el Ejercicio 17
     public static void ejercicio17(Scanner sc) {
 
-        import java.text.SimpleDateFormat;
-        import java.util.Date;
 
-        public class FuncionesPrograma {
-
+        class FuncionesPrograma {
             public static String getFechaString(Date fecha) {
-                // Definir el formato de fecha deseado
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                // Convertir la fecha a una cadena utilizando el formato definido
                 return sdf.format(fecha);
+            }
+
+            public static Date getFechaDate(int dia, int mes, int anio) {
+                Calendar calendario = Calendar.getInstance();
+                calendario.set(anio, mes - 1, dia); // Mes empieza desde 0 (enero es 0)
+                return calendario.getTime();
             }
         }
 
-
-
         class Principal {
-            public static void main(String[] args) {
+            public static void main17(String[] args) {
                 // Crear una instancia de Date con la fecha y hora actuales
                 Date fechaActual = new Date();
 
@@ -531,49 +533,15 @@ public class Main {
 
                 // Imprimir la fecha en formato cadena
                 System.out.println("La fecha actual es: " + fechaComoCadena);
+
+                // Usar el método getFechaDate
+                Date fechaEspecifica = FuncionesPrograma.getFechaDate(15, 9, 2024); // Ejemplo de fecha
+                String fechaEspecificaComoCadena = FuncionesPrograma.getFechaString(fechaEspecifica);
+                System.out.println("La fecha específica es: " + fechaEspecificaComoCadena);
             }
         }
-
-
-        // Método para el Ejercicio 18
-    public static void ejercicio18(Scanner sc) {
-
-            import java.text.SimpleDateFormat;
-        import java.util.Calendar;
-        import java.util.Date;
-
-            public class FuncionesPrograma {
-
-                // Método para convertir una fecha (día, mes, año) a un objeto Date
-                public static Date getFechaDate(int dia, int mes, int anho) {
-                    //Aca uso la clase Calendar
-                    Calendar calendar = Calendar.getInstance();
-                    // Establecemos el año, mes y día en el calendario
-                    calendar.set(anho, mes - 1, dia);
-                    // Retornamos la fecha correspondiente
-                    return calendar.getTime();
-                }
-
-                // Método para convertir una fecha de tipo Date a una cadena
-                public static String getFechaString(Date fecha) {
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                    return sdf.format(fecha);
-                }
-            }
-
-            class Principal {
-                public static void main(String[] args) {
-                    // Usar el método getFechaDate para crear una fecha específica
-                    Date fechaEspecifica = FuncionesPrograma.getFechaDate(8, 9, 2024);
-
-                    // Aca convierto la fecha en cadena getFechaString
-                    String fechaComoCadena = FuncionesPrograma.getFechaString(fechaEspecifica);
-
-                    // Fecha en modo cadena
-                    System.out.println("La fecha específica es: " + fechaComoCadena);
-                }
-            }
     }
+
 
     // Método para el Ejercicio 19
     public static void ejercicio19()  {
@@ -585,12 +553,16 @@ public class Main {
 
     }
 
+
+
     // Método para el Ejercicio 20
     public static void ejercicio20(Scanner sc) {
         // Lógica para el ejercicio 20
-        punto20();
+OperacionesFraccion.obtenerOperacionesFraccion();
 
     }
+
+
 
     // Método para el Ejercicio 21
     public static int ejercicio21(int x) {
@@ -613,5 +585,12 @@ public class Main {
     public static String ejercicio23(String s) {
         if (s == "") return "";
         return s.charAt(s.length() - 1) + ejercicio23(s.substring(0, s.length() - 1));
+
     }
+
+
 }
+
+
+
+

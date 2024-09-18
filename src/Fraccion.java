@@ -1,7 +1,6 @@
-public class Fracciones {
+public class Fraccion {
     private int numerador;
     private int denominador;
-
 
 
     public Fraccion(int numerador, int denominador) {
@@ -68,6 +67,6 @@ public class Fracciones {
     public String toString() {
         return numerador + "/" + denominador;
     }
-
-
 }
+
+
