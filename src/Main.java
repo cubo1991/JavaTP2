@@ -10,9 +10,10 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
-    public static <T> void print(T content){
+    public static <T> void print(T content) {
         System.out.println(content);
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -20,44 +21,26 @@ public class Main {
 
         ejercicio1(sc);
         ejercicio2(sc);
-
-       ejercicio3(sc);
-
-
-      ejercicio4(sc);  // Método para el Ejercicio 4
-        ejercicio5(sc);  // Método para el Ejercicio 5
-         ejercicio6(sc);  // Método para el Ejercicio 6
-         ejercicio7();  // Método para el Ejercicio 7
-         ejercicio8(sc);  // Método para el Ejercicio 8
-         ejercicio9(sc);  // Método para el Ejercicio 9
-
-
-       ejercicio10(sc);  // Método para el Ejercicio 10
-
-
-
-      ejercicio12(sc);  // Método para el Ejercicio 12
-         ejercicio13(sc);  // Método para el Ejercicio 13
-         ejercicio14(sc);  // Método para el Ejercicio 14
-         ejercicio15(sc);  // Método para el Ejercicio 15
-
-       ejercicio16(sc);  // Método para el Ejercicio 16
-       //ejercicio17(sc);  // Método para el Ejercicio 17
-
-
-         ejercicio19();  // Método para el Ejercicio 19
-
-        ejercicio20(sc);  // Método para el Ejercicio 20
-
-       //ejercicio21();  // Método para el Ejercicio 21
-       //ejercicio22();  // Método para el Ejercicio 22
-        //ejercicio23();  // Método para el Ejercicio 23
-     print(ejercicio21(5));
+        ejercicio3(sc);
+        ejercicio4(sc);
+        ejercicio5(sc);
+        ejercicio6(sc);
+        ejercicio7();
+        ejercicio8(sc);
+        ejercicio9(sc);
+        ejercicio10(sc);
+        ejercicio12(sc);
+        ejercicio13(sc);
+        ejercicio14(sc);
+        ejercicio15(sc);
+        ejercicio16(sc);
+        ejercicio17(sc);
+        ejercicio19();
+        ejercicio20(sc);
+        print(ejercicio21(5));
         print(ejercicio22("789"));
-       print(ejercicio23("oirotircse ed arodatupmoc"));
+        print(ejercicio23("oirotircse ed arodatupmoc"));
     }
-
-
 
 
     // Método para el Ejercicio 1
@@ -215,7 +198,7 @@ public class Main {
         System.out.println("La cantidad de vocales en la cadena es: " + totalDEvocales);
     }
 
-    public static int contadoresDeVocales3 (String cadena) {
+    public static int contadoresDeVocales3(String cadena) {
         int contadOrDeVocales = 0;
         for (int i = 0; i < cadena.length(); i++) {
             char caracteres = cadena.charAt(i);
@@ -230,12 +213,12 @@ public class Main {
                     break;
 
 
-
             }
 
         }
         return contadOrDeVocales;
     }
+
     // Método para el Ejercicio 8
     public static void ejercicio8(Scanner sc) {
         // Lógica para el ejercicio 8
@@ -243,7 +226,7 @@ public class Main {
         String textos3 = "La lluvia en Mendoza es escasa";
         String textoModificado = textos3.replace('a', 'e');
         System.out.println("texto original :  " + textos3);
-        System.out.println(" texto modificado :  " + textoModificado );
+        System.out.println(" texto modificado :  " + textoModificado);
 
     }
 
@@ -252,10 +235,10 @@ public class Main {
         // Lógica para el ejercicio 9
         // usamos la funcion charAT() para transforma cada carácter a su código ASCII
         String text0sacodigo = "La lluvia en Mendoza es escasa";
-        for ( int x= 0; x < text0sacodigo.length(); x++) {
-            char letras= text0sacodigo.charAt(x);
-            int codigoAscii= (int) letras;
-            System. out.print(codigoAscii + " ");
+        for (int x = 0; x < text0sacodigo.length(); x++) {
+            char letras = text0sacodigo.charAt(x);
+            int codigoAscii = (int) letras;
+            System.out.print(codigoAscii + " ");
         }
         System.out.println();
 
@@ -271,7 +254,7 @@ public class Main {
         String Cadena = sc.nextLine();
 
         //mostrar valor ingresado por pantalla
-        System.out.println("Frase ingresada: "+Cadena );
+        System.out.println("Frase ingresada: " + Cadena);
 
         //mostrar por consola que ingrese los datos pedidos
         System.out.println("Desea convertir la frase en:");
@@ -282,25 +265,25 @@ public class Main {
 
 
         //Creamos un if
-        if (num == 1){
+        if (num == 1) {
             //Convertir Cadena en Mayusculas
             String ValorMayus = Cadena.toUpperCase();
 
             //mostrar por consola la frase convertida
-            System.out.println("Frase en mayusculas: "+ ValorMayus );
+            System.out.println("Frase en mayusculas: " + ValorMayus);
 
         } else if (num == 2) {
             //Convertir Cadena en Minusculas
             String Minus = Cadena.toLowerCase();
 
             //mostrar por consola la frase convertida
-            System.out.println("Frase en minusculas: "+ Minus);
+            System.out.println("Frase en minusculas: " + Minus);
 
-          } else { //si ingresa un valor fuera del rango ( !!1 || !!2)
+        } else { //si ingresa un valor fuera del rango ( !!1 || !!2)
 
             //mostrar por consola un mensaje
             System.out.println("Valor ingresado incorrecto o fuera de rango ");
-       }
+        }
 
 
     }
@@ -309,7 +292,7 @@ public class Main {
     public static void ejercicio11(Scanner sc) {
 
         //Pedir al usuario que ingrese dos datos
-        System.out.println("Ingrese las palabras:" );
+        System.out.println("Ingrese las palabras:");
 
         //escanear los datos ingresados
         String Palabra1 = sc.nextLine();
@@ -321,20 +304,19 @@ public class Main {
         int ValorCompareTC = Palabra1.compareToIgnoreCase(Palabra2);
 
 
-
         //metodo equals
         if (Palabra1.equals(Palabra2)) {
             System.out.println("Ambas palabras son iguales, usando el metodo equals");
-        }else {
+        } else {
             System.out.println("Las palabras ingresadas no son iguales, usando el metodo equals");
         }
 
         //metodo compareTo
         if (Valorcompare < 0) {
-            System.out.println("La palabra: <"+Palabra1+"> 'es menor que la segunda palabra: <"+Palabra2+"> , usando el metodo compareTo");
+            System.out.println("La palabra: <" + Palabra1 + "> 'es menor que la segunda palabra: <" + Palabra2 + "> , usando el metodo compareTo");
 
-        } else if (Valorcompare > 0 ){
-            System.out.println("La palabra: <"+Palabra1+"> es mayor que la segunda palabra: <"+Palabra2+"> , usando el metodo compareTo");
+        } else if (Valorcompare > 0) {
+            System.out.println("La palabra: <" + Palabra1 + "> es mayor que la segunda palabra: <" + Palabra2 + "> , usando el metodo compareTo");
         } else {
 
             System.out.println("Ambas palabras son iguales, usando el metodo compareTo");
@@ -346,12 +328,11 @@ public class Main {
             System.out.println("Ambas palabras son iguales (ignorando Mayusculas e minusculas), usando el metodo CompareToIgnoreCase");
 
         } else if (ValorCompareTC < 0) {
-            System.out.println("La palabra: <"+Palabra1+"> es menor que la segunda palabra: <"+Palabra2+"> , usando el metodo CompareToIgnoreCase");
+            System.out.println("La palabra: <" + Palabra1 + "> es menor que la segunda palabra: <" + Palabra2 + "> , usando el metodo CompareToIgnoreCase");
 
-        }else {
-            System.out.println("La palabra: <"+Palabra1+"> es mayor que la segunda palabra: <"+Palabra2+"> , usando el metodo CompareToIgnoreCase");
+        } else {
+            System.out.println("La palabra: <" + Palabra1 + "> es mayor que la segunda palabra: <" + Palabra2 + "> , usando el metodo CompareToIgnoreCase");
         }
-
 
 
     }
@@ -365,17 +346,15 @@ public class Main {
         String Cadena = sc.nextLine();
 
 
-
-
-        if (Cadena.length() < 5){ // para evitar un error por insuficientes caracteres
+        if (Cadena.length() < 5) { // para evitar un error por insuficientes caracteres
 
             System.out.println("Caracteres insufiecientes, intente de nuevo");
-        }else {
+        } else {
 
             //metodo substring
-            String SubCadena = Cadena.substring(3,5);
+            String SubCadena = Cadena.substring(3, 5);
 
-            System.out.println("La cuarta y quinta letra de la frase son: "+SubCadena);
+            System.out.println("La cuarta y quinta letra de la frase son: " + SubCadena);
         }
 
 
@@ -396,7 +375,6 @@ public class Main {
         String cad2 = Cadena2.toLowerCase();
 
 
-
         //metodo contains
         boolean FraseCont = cad1.contains(cad2);
 
@@ -409,7 +387,7 @@ public class Main {
         //metodo IndexOf
         int FraseIndex = cad1.indexOf(cad2);
 
-        if (FraseIndex != -1 ) {
+        if (FraseIndex != -1) {
             System.out.println("La 2da frase: <" + Cadena2 + ">, esta dentro de la 1era frase: <" + Cadena1 + ">, usando IndexOf");
         } else {
             System.out.println("La 2da frase: <" + Cadena2 + ">, NO se encontró dentro de la 1era frase: <" + Cadena1 + ">, usando IndexOf");
@@ -418,10 +396,10 @@ public class Main {
 
     }
 
-     // Método para el Ejercicio 14
+    // Método para el Ejercicio 14
     public static void ejercicio14(Scanner sc) {
 
-         class MainInt {
+        class MainInt {
 
             public static void main14(String[] args) {
                 // Declaración de una variable int
@@ -445,7 +423,7 @@ public class Main {
             }
         }
 
-         class MainInteger {
+        class MainInteger {
 
             public static void main142(String[] args) {
                 // Declaración de un objeto Integer
@@ -467,14 +445,13 @@ public class Main {
                 System.out.println("La suma de los números es: " + suma);
             }
         }
-}
-
+    }
 
 
     // Método para el Ejercicio 15
     public static void ejercicio15(Scanner sc) {
 
-         class Main15 {
+        class Main15 {
             public static void main15(String[] args) {
                 Integer numero = null;
 
@@ -491,7 +468,7 @@ public class Main {
     // Método para el Ejercicio 16
     public static void ejercicio16(Scanner sc) {
 
-         class Main16 {
+        class Main16 {
             public static void main16(String[] args) {
                 // Crear una variable de tipo Double
                 Double valorDouble = 7.7;
@@ -506,70 +483,68 @@ public class Main {
 
     }
 
-    // Método para el Ejercicio 17
-    public static void ejercicio17(Scanner sc) {
+    // Métodos para el Ejercicio 17 y 18
+    // Clase FuncionesPrograma
+    class FuncionesPrograma {
 
-
-        class FuncionesPrograma {
-            public static String getFechaString(Date fecha) {
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-                return sdf.format(fecha);
-            }
-
-            public static Date getFechaDate(int dia, int mes, int anio) {
-                Calendar calendario = Calendar.getInstance();
-                calendario.set(anio, mes - 1, dia); // Mes empieza desde 0 (enero es 0)
-                return calendario.getTime();
-            }
+        // Método que recibe la fecha y la retorna como cadena
+        public static String getFechaString(Date fecha) {
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            return sdf.format(fecha);
         }
 
-        class Principal {
-            public static void main17(String[] args) {
-                // Crear una instancia de Date con la fecha y hora actuales
-                Date fechaActual = new Date();
-
-                // Llamar al método getFechaString de la clase FuncionesPrograma
-                String fechaComoCadena = FuncionesPrograma.getFechaString(fechaActual);
-
-                // Imprimir la fecha en formato cadena
-                System.out.println("La fecha actual es: " + fechaComoCadena);
-
-                // Usar el método getFechaDate
-                Date fechaEspecifica = FuncionesPrograma.getFechaDate(15, 9, 2024); // Ejemplo de fecha
-                String fechaEspecificaComoCadena = FuncionesPrograma.getFechaString(fechaEspecifica);
-                System.out.println("La fecha específica es: " + fechaEspecificaComoCadena);
-            }
+        // Método que recibe día, mes y año, y retorna un objeto Date
+        public static Date getFechaDate(int dia, int mes, int anho) {
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(anho, mes - 1, dia);
+            return calendar.getTime();
         }
     }
 
 
+    public static void ejercicio17(Scanner sc) {
+        // Ejecutar el main de Principal
+        Principal.main(new String[]{});
+    }
+
+    class Principal {
+
+        public static void main(String[] args) {
+
+            // Agrego la fecha que yo quiera
+            Date fechaEspecifica = FuncionesPrograma.getFechaDate(05, 01, 2024);
+
+            // Convierto a cadena
+            String fechaComoCadena = FuncionesPrograma.getFechaString(fechaEspecifica);
+
+            // Imprimir el resultado
+            System.out.println("La fecha específica es: " + fechaComoCadena);
+        }
+    }
+
     // Método para el Ejercicio 19
-    public static void ejercicio19()  {
+    public static void ejercicio19() {
         // Lógica para el ejercicio 19
         Calculo.realizarCalculos();
 
 
-
-
     }
-
 
 
     // Método para el Ejercicio 20
     public static void ejercicio20(Scanner sc) {
         // Lógica para el ejercicio 20
-OperacionesFraccion.obtenerOperacionesFraccion();
+        OperacionesFraccion.obtenerOperacionesFraccion();
 
     }
 
 
-
     // Método para el Ejercicio 21
     public static int ejercicio21(int x) {
-        if (x==0) {
+        if (x == 0) {
             return 0;
         } else {
-            return x + ejercicio21( x - 1);
+            return x + ejercicio21(x - 1);
         }
     }
 
