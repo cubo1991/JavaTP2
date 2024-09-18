@@ -28,9 +28,10 @@ public class Main {
         ejercicio7();
         ejercicio8(sc);
         ejercicio9(sc);
-        ejercicio10(sc);
-        ejercicio12(sc);
-        ejercicio13(sc);
+        ejercicio10();
+        ejercicio11();
+        ejercicio12();
+        ejercicio13();
         ejercicio14(sc);
         ejercicio15(sc);
         ejercicio16(sc);
@@ -244,154 +245,157 @@ public class Main {
 
     }
 
-    // Método para el Ejercicio 10
-    public static void ejercicio10(Scanner sc) {
+    //Método para el Ejercicio 10
+    public static void ejercicio10(){
+        Scanner leer = new Scanner(System.in);
 
-        //Mostrar por consola un mensaje
-        System.out.println("Ingrese un frase: ");
+        //Mostrar un mensaje por consola
+        System.out.println("Ingrese una frase u oración:");
+        String cadena = leer.nextLine();
 
-        //escanear el dato ingresado por el usuario
-        String Cadena = sc.nextLine();
+        //mostrar el dato ingresado
+        System.out.println("La frase ingresada es:"+cadena);
 
-        //mostrar valor ingresado por pantalla
-        System.out.println("Frase ingresada: " + Cadena);
+        //llamar funcion
+        ConvertirMayusMinus.FraseConvertida(cadena,leer);
+    }
+    public class ConvertirMayusMinus{
+        static void FraseConvertida(String cadena,Scanner scanner){
+            int num = 0;
+            do {
+                System.out.println("Desea convertir la frase en:");
+                System.out.println("-Mayusculas(1)");
+                System.out.println("-Minusculas(2)");
+                //leer dato
+                num= scanner.nextInt();
 
-        //mostrar por consola que ingrese los datos pedidos
-        System.out.println("Desea convertir la frase en:");
-        System.out.println("Mayúsculas ('1') o Minusculas ('2')");
+                //bucle if
+                if (num!=1 && num!=2){
+                    System.out.println("Numero no valido, intentelo de nuevo");
+                }
+            }while (num!=1 && num!=2);
 
-        //escanear el dato ingresado por el usuario
-        int num = sc.nextInt();
+            //mostrar resultados
+            if (num==1){
+                System.out.println("Frase en mayusculas:"+cadena.toUpperCase());
+            } else if (num==2) {
+                System.out.println("Frase en minusculas:"+cadena.toLowerCase());
+
+            }
 
 
-        //Creamos un if
-        if (num == 1) {
-            //Convertir Cadena en Mayusculas
-            String ValorMayus = Cadena.toUpperCase();
-
-            //mostrar por consola la frase convertida
-            System.out.println("Frase en mayusculas: " + ValorMayus);
-
-        } else if (num == 2) {
-            //Convertir Cadena en Minusculas
-            String Minus = Cadena.toLowerCase();
-
-            //mostrar por consola la frase convertida
-            System.out.println("Frase en minusculas: " + Minus);
-
-        } else { //si ingresa un valor fuera del rango ( !!1 || !!2)
-
-            //mostrar por consola un mensaje
-            System.out.println("Valor ingresado incorrecto o fuera de rango ");
         }
-
-
     }
 
+
     // Método para el Ejercicio 11
-    public static void ejercicio11(Scanner sc) {
+    public static void ejercicio11() {
 
+        Scanner scanner = new Scanner(System.in);
         //Pedir al usuario que ingrese dos datos
-        System.out.println("Ingrese las palabras:");
+        System.out.println("Ingrese la primera palabra:");
+        String Palabra1 = scanner.nextLine();
 
-        //escanear los datos ingresados
-        String Palabra1 = sc.nextLine();
-        String Palabra2 = sc.nextLine();
+        System.out.println("Ingrese la segunda palabra:");
+        String Palabra2 = scanner.nextLine();
 
-        //metodo compareTo
+        //compareTo: Compara cadenas lexicográficamente (case-sensitive).
+    /*devuelve:
+          - Un número negativo si la cadena actual es lexicográficamente (codigo ascii) menor que la cadena pasada.
+          - Cero si son iguales.
+          - Un número positivo si la cadena actual es mayor.*/
         int Valorcompare = Palabra1.compareTo(Palabra2);
-        //metodo CompareToIgnore Case
-        int ValorCompareTC = Palabra1.compareToIgnoreCase(Palabra2);
-
-
-        //metodo equals
-        if (Palabra1.equals(Palabra2)) {
-            System.out.println("Ambas palabras son iguales, usando el metodo equals");
-        } else {
-            System.out.println("Las palabras ingresadas no son iguales, usando el metodo equals");
-        }
 
         //metodo compareTo
         if (Valorcompare < 0) {
-            System.out.println("La palabra: <" + Palabra1 + "> 'es menor que la segunda palabra: <" + Palabra2 + "> , usando el metodo compareTo");
+            System.out.println("La palabra: <"+Palabra1+"> 'es menor que la segunda palabra: <"+Palabra2+"> , usando el metodo compareTo");
 
-        } else if (Valorcompare > 0) {
-            System.out.println("La palabra: <" + Palabra1 + "> es mayor que la segunda palabra: <" + Palabra2 + "> , usando el metodo compareTo");
+        } else if (Valorcompare > 0 ){
+            System.out.println("La palabra: <"+Palabra1+"> es mayor que la segunda palabra: <"+Palabra2+"> , usando el metodo compareTo");
         } else {
 
             System.out.println("Ambas palabras son iguales, usando el metodo compareTo");
         }
 
 
+        //CompareToIgnore Case: Compara cadenas lexicográficamente,(no aplica case-sensitive)
+        int ValorCompareTC = Palabra1.compareToIgnoreCase(Palabra2);
+
         //metodo CompareToIgnoreCase
         if (ValorCompareTC == 0) {
             System.out.println("Ambas palabras son iguales (ignorando Mayusculas e minusculas), usando el metodo CompareToIgnoreCase");
 
         } else if (ValorCompareTC < 0) {
-            System.out.println("La palabra: <" + Palabra1 + "> es menor que la segunda palabra: <" + Palabra2 + "> , usando el metodo CompareToIgnoreCase");
+            System.out.println("La palabra: <"+Palabra1+"> es menor que la segunda palabra: <"+Palabra2+"> , usando el metodo CompareToIgnoreCase");
 
-        } else {
-            System.out.println("La palabra: <" + Palabra1 + "> es mayor que la segunda palabra: <" + Palabra2 + "> , usando el metodo CompareToIgnoreCase");
+        }else {
+            System.out.println("La palabra: <"+Palabra1+"> es mayor que la segunda palabra: <"+Palabra2+"> , usando el metodo CompareToIgnoreCase");
+        }
+
+
+        //metodo equals: Compara si dos cadenas son exactamente iguales (case-sensitive).
+        if (Palabra1.equals(Palabra2)) {
+            System.out.println("Ambas palabras son iguales, usando el metodo equals");
+        }else {
+            System.out.println("Las palabras ingresadas no son iguales, usando el metodo equals");
         }
 
 
     }
 
     // Método para el Ejercicio 12
-    public static void ejercicio12(Scanner sc) {
+    public static void ejercicio12() {
 
-        //mostramos mensaje por consola
-        System.out.print("Ingrese una frase:");
-        //escanear el dato ingresado por el usuario
-        String Cadena = sc.nextLine();
+        Scanner scanner = new Scanner(System.in);
+
+        //definimos variable
+        String Cadena;
+
+        while (true){
+
+            //mostramos mensaje por consola
+            System.out.print("Ingrese una frase (minimo 5 caracteres):");
+            //escanear el dato ingresado por el usuario
+            Cadena = scanner.nextLine();
 
 
-        if (Cadena.length() < 5) { // para evitar un error por insuficientes caracteres
+            if (Cadena.length() < 5){ // para evitar un error por insuficientes caracteres
 
-            System.out.println("Caracteres insufiecientes, intente de nuevo");
-        } else {
-
-            //metodo substring
-            String SubCadena = Cadena.substring(3, 5);
-
-            System.out.println("La cuarta y quinta letra de la frase son: " + SubCadena);
+                System.out.println("Caracteres insufiecientes, intente de nuevo");
+            }else {
+                break;
+            }
         }
+
+
+        //metodo substring
+        String SubCadena = Cadena.substring(3,5);
+
+        System.out.println("La cuarta y quinta letra de la frase son: "+SubCadena);
 
 
     }
 
     // Método para el Ejercicio 13
-    public static void ejercicio13(Scanner sc) {
-
-        //mostramos mensaje por consola
-        System.out.println("Ingrese dos frases:");
-
-        //escaneamos valores
-        String Cadena1 = sc.nextLine();
-        String Cadena2 = sc.nextLine();
-
-        //convertimos en minusculas, para evitar errores
-        String cad1 = Cadena1.toLowerCase();
-        String cad2 = Cadena2.toLowerCase();
+    public static void ejercicio13() {
+        Scanner leer = new Scanner(System.in);
 
 
-        //metodo contains
-        boolean FraseCont = cad1.contains(cad2);
+        // pedir datos al usuario
+        System.out.print("Ingrese la primera frase: ");
+        String cadena1 = leer.nextLine();
 
-        if (FraseCont) {
-            System.out.println("La 2da frase: <" + Cadena2 + ">, esta dentro de la 1ra frase: <" + Cadena1 + ">, usando Contains");
+        System.out.print("Ingrese la segunda frase: ");
+        String cadena2 = leer.nextLine();
+
+        // Verificar si la segunda cadena está dentro de la primera usando contains
+        //contais: se utiliza para verificar si una cadena contiene una subcadena específica
+
+        if (cadena1.toLowerCase().contains(cadena2.toLowerCase())) {
+            //utilizamos to.lowercase porque contains en case-sensivite
+            System.out.println("La segunda cadena se encuentra dentro de la primera.");
         } else {
-            System.out.println("La 2da frase: <" + Cadena2 + ">, NO se encontró dentro de la 1ra frase: <" + Cadena1 + ">, usando Contains");
-        }
-
-        //metodo IndexOf
-        int FraseIndex = cad1.indexOf(cad2);
-
-        if (FraseIndex != -1) {
-            System.out.println("La 2da frase: <" + Cadena2 + ">, esta dentro de la 1era frase: <" + Cadena1 + ">, usando IndexOf");
-        } else {
-            System.out.println("La 2da frase: <" + Cadena2 + ">, NO se encontró dentro de la 1era frase: <" + Cadena1 + ">, usando IndexOf");
-
+            System.out.println("La segunda cadena NO se encuentra dentro de la primera.");
         }
 
     }
